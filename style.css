@@ -9,6 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: lightgray;
 }
 
 html {
@@ -206,6 +207,12 @@ section {
   gap: 1rem;
 }
 
+.jobs180-git {
+  text-align: center;
+  color: black; 
+  margin-right: 5px; 
+  font-size: 1px;
+}
 /* ICONS */
 
 .icon {
@@ -430,3 +437,101 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+/* Gallery */
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Space between images */
+}
+
+.gallery-item {
+  flex: 1 1 calc(33.333% - 16px); /* Adjust size based on your preference */
+  cursor: pointer;
+  text-align: center;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: adds rounded corners */
+  transition: transform 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Modal */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.modal-navigation {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  margin-top: 10px; /* Space above the buttons */
+  padding: 0 20px; /* Add horizontal padding */
+}
+
+.modal-button {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border: none;
+  color: #333; /* Button text color */
+  padding: 10px 15px; /* Button padding */
+  cursor: pointer; /* Change cursor to pointer */
+  border-radius: 5px; /* Rounded corners */
+  margin: 0 10px; /* Add margin to each button for spacing */
+}
+
+.modal-button:hover {
+  background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 600px) {
+  .modal-navigation {
+    justify-content: center; /* Center buttons horizontally */
+    flex-direction: row; /* Arrange buttons side by side */
+  }
+
+  .modal-button {
+    width: auto; /* Allow buttons to size based on content */
+    margin: 0 5px; /* Less margin for side-by-side buttons */
+  }
+}
+
+.modal-caption {
+  margin-top: 10px; /* Spacing from the image */
+  font-size: 18px; /* Adjust the font size as needed */
+  text-align: center; /* Center the caption text */
+  color: #fff; /* Change the color to suit your design */
+}
+
